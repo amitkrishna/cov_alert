@@ -29,9 +29,8 @@ while True:
             for session in center['sessions']:
                 #For Age not equal to 45 and capacity is above zero
                 if (session['min_age_limit'] != 45) & (session['available_capacity'] > 0):
-                    message_string=f"Subject: {today}'s Alert'!! \n\n Available - {session['available_capacity']} in {center['name']} on {session['date']} for the age {session['min_age_limit']}"
+                    message_string=f"Hej: {today}'s Alert'!! \n\n Available Slots - {session['available_capacity']} in center {center['name']} on the session {session['date']} for the minimum age {session['min_age_limit']}"
                     send_simple_message(MY_EMAIL, MY_DOMAIN, MY_MAIL, message_string)
-                    #Configure GMAIL settings
         time.sleep(1000)
 
 
